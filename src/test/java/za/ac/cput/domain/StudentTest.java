@@ -6,8 +6,10 @@
 package za.ac.cput.domain;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 class StudentTest {
@@ -29,6 +31,12 @@ class StudentTest {
 
         assertSame(student, student1);
         assertNotSame(student, student2);
+    }
+
+    @Test
+    @Timeout(2)
+    public void testTimeout() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(1);
     }
   
 }
