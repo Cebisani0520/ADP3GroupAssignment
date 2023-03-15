@@ -38,5 +38,9 @@ class StudentTest {
     public void testTimeout() throws InterruptedException {
         TimeUnit.SECONDS.sleep(1);
     }
-  
+
+    @Test
+    public void testFail() {
+        fail("This test fails intentionally");
+    }
 }
