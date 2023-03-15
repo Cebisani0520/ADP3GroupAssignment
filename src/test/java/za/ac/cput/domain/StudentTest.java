@@ -20,5 +20,15 @@ class StudentTest {
         }
         assertEquals(10, list.size());
     }
+
+    @Test
+    public void testIdentity() {
+        Student student = new Student();
+        Student student1 = student;
+        Student student2 = new Student();
+
+        assertSame(student, student1);
+        assertNotSame(student, student2);
+    }
   
 }
