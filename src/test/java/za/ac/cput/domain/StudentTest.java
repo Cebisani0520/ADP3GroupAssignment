@@ -5,6 +5,7 @@
 
 package za.ac.cput.domain;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
@@ -42,5 +43,13 @@ class StudentTest {
     @Test
     public void testFail() {
         fail("This test fails intentionally");
+    }
+
+    @Test
+    @Disabled
+    public void testDisabled() {
+        Student s2 = new Student();
+
+        assertNotNull(s2);
     }
 }
